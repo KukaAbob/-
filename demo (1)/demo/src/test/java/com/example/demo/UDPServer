@@ -1,0 +1,14 @@
+public class UDPServer {
+
+    public static void main(String[] args)
+
+    DatagramSocket datagramsocket = new DatagramSocket(3000);
+    DatagramPacket datagramPacket = new DatagramPacket(new byte[256] , 256)
+    datagramsocket.receive(datagramPacket);
+
+    int leng = datagramPacket.getLength();
+
+    String string = new String(datagramPacket.getData(),0, length);
+
+    System.out.println("string="+string)
+}
